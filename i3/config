@@ -11,6 +11,9 @@
 
 set $mod Mod4
 
+# Set dpi for hidpi screen 
+# exec xrandr --dpi 220
+
 # autostart programs
 exec --no-startup-id udiskie &
 
