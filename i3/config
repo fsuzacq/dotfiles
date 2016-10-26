@@ -11,11 +11,12 @@
 
 set $mod Mod4
 
-# Set dpi for hidpi screen 
+# Set dpi for hidpi screen
 # exec xrandr --dpi 220
 
 # autostart programs
 exec --no-startup-id udiskie &
+exec --no-startup-id nm-applet &
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -212,8 +213,8 @@ workspace 4 output VGA1
 workspace 5 output VGA1
 
 exec i3-msg 'workspace 1; exec /usr/bin/slack'
-exec i3-msg 'workspace 2; exec /usr/bin/firefox'
-exec i3-msg 'workspace 3; exec /usr/bin/atom'
+exec i3-msg 'workspace 2; exec /usr/bin/chromium'
+exec i3-msg 'workspace 3; exec /usr/bin/emacs'
 exec i3-msg 'workspace 4; exec gnome-terminal'
 exec i3-msg 'workspace 5; exec /usr/bin/spotify'
 
@@ -224,5 +225,5 @@ bindsym $mod+c exec gnome-calculator
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output primary
+        output eDP1
 }
